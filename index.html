@@ -15,48 +15,215 @@
 </head>
 
 <body>
+  <section class="container py-20 mx-auto">
 
-  <div class="container py-20">
-    <div class="text-center">Home</div>
-  </div>
+    <header id="navbar" class="text-black lg:text-white">
+      <nav class="max-w-[1260px] mx-auto">
+        <!-- Mobile/Sticky Menu -->
+        <div id="sticky_menu" class="w-full top-0 left-4">
+          <div class="flex items-center justify-between h-24 px-5 md:px-10 lg:max-w-4xl lg:mx-auto">
+            <div class="flex-1 grid">
+              <img src="./src/images/logo.svg" alt="logo" class="w-20 place-items-start">
+            </div>
+            <div id="nav_menu"
+              class="absolute top-0 right-[-100%] min-h-[70vh] w-[70%] px-5 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden md:px-10 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
+              <div class="flex items-center justify-between h-24 lg:hidden">
+                <div></div>
+                <div id="closeicon" class="text-3xl cursor-pointer">
+                  <img src="./src/images/icon-menu-close.svg" alt="#">
+                </div>
+              </div>
+              <ul class="flex flex-col items-start gap-5 lg:flex-row">
+                <li><a href="#" class=" hover:text-[#f35c51] ease-in duration-300"></a>Home</li>
+                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>New</li>
+                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Popular</li>
+                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Trending</li>
+                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Categories</li>
+              </ul>
+            </div>
+
+            <div class="flex-1 text-white text-3xl cursor-pointer text-right md:hidden lg:hidden">
+              <img src="./src/images/icon-menu.svg" alt="" id="hamburger"">
+            </div>
+          </div>
+        </div>
+        <!-- Desktop Menu -->
+        <div class=" hidden lg:block py-4">
+              <div class="container flex items-center justify-center">
+                <!-- social icons -->
+                <div class="flex-1 flex items-center">
+                  <p class="font-bold lobster">Follow us <span class="ml-3 mr-5">-</span></p>
+
+                  <ul class="nav_icons flex space-x-4">
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="text-green-700"><i class="ri-twitter-x-line"></i></a>
+                    </li>
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="text-green-700"><i class="ri-facebook-fill"></i></a>
+                    </li>
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="text-green-700"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="text-green-700"><i class="ri-youtube-fill"></i></a></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="flex-1 lg:hidden">
+                  <img src="/src/images/logo.png" alt="logo" class="w-20 mx-auto">
+                </div>
+
+                <div class="flex-1 flex items-center justify-end">
+                  <ul class="nav_icons flex space-x-8">
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="text-green-700"><i class="ri-user-fill"></i></a>
+                    </li>
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="relative text-green-700"><i class="ri-shopping-bag-fill"></i><span
+                          class="font-bold absolute -top-2 -right-6 bg-white text-black text-sm w-6 h-6 rounded-full grid place-items-center">0</span></a>
+                    </li>
+                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                      <a href="#" class="text-green-700"><i class="ri-search-line"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex items-center justify-center mt-10 lg:hidden">
+                <div class="flex justify-center gap-6">
+                  <a href="#home" class="nav-link active">Home</a>
+                  <a href="#about" class="nav-link">About</a>
+                  <a href="#fragrance" class=" nav-link">Fragrance</a>
+                  <a href="#ptoducts" class="nav-link">Products</a>
+                </div>
+              </div>
+            </div>
+
+      </nav>
+
+    </header>
+
+    <!-- <header>
+      <nav class="flex items-center justify-between h-16 sm:h-20">
+        <div class="container mx-auto flex items-center justify-between">
+          <img src="./src/images/logo.svg" alt="Home Smart Logo">
+          <div id="menu" class="absolute top-40 right-5 flex flex-col">
+            <ul class="flex flex-col bg-white p-20 lg:items-center lg:gap-5 text-gray-600 cursor-pointer">
+              <li><a href="#" class=" hover:text-[#f35c51] ease-in duration-300"></a>Home</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>New</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Popular</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Trending</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Categories</li>
+            </ul>
+          </div>
+          <div role=" menubar"
+            class="hidden flex-col gap-4 absolute shadow-xl text-center text-lg p-6 items-center lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full">
+            <ul class="flex items-center gap-5 text-gray-600 cursor-pointer">
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Home</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>New</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Popular</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Trending</li>
+              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Categories</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header> -->
 
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+    <!-- <div class="flex items-center justify-between py-10">
+      <img src="./src/images/logo.svg" alt="">
+      <ul class="flex items-center gap-5 text-gray-600 cursor-pointer">
+        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Home</li>
+        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>New</li>
+        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Popular</li>
+        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Trending</li>
+        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Categories</li>
+      </ul>
+    </div> -->
 
-  The Bright Future of Web 3.0?
+    <div class="flex">
+      <div class="flex">
+        <div>
+          <img src="./src/images/image-web-3-mobile.jpg" alt="">
+          <div>
+            <div>
+              <h2 class="">The Bright Future of Web 3.0?</h2>
+            </div>
+            <div>
+              <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the
+                hands of the
+                people.
+                But is it really fulfilling its promise?</p>
+              <button>Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black text-white/90">
+        <h3>New</h3>
+        <h5>Hydrogen VS Electric Cars</h5>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <div class="border-1 text-[#30304a]"></div>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
-  people.
-  But is it really fulfilling its promise?
+        <h5>The Downsides of AI Artistry</h5>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <div class="border-1 text-[#30304a]"></div>
 
-  Read more
+        <h5>Is VC Funding Drying Up?</h5>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+    </div>
 
-  New
+    <div>
+      <div class="flex">
+        <div>
+          <img src="./src/images/image-retro-pcs.jpg" alt="#">
+        </div>
+        <div>
+          <h2>01</h2>
+          <h5>Reviving Retro PCs</h5>
+          <p>What happens when old PCs are given modern upgrades?</p>
+          <div>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <img src="./src/images/image-top-laptops.jpg" alt="#">
+        </div>
+        <div>
+          <h2>02</h2>
+          <h5>Top 10 Laptops of 2022</h5>
+          <p>Our best picks for various needs and budgets.</p>
+          <div>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <img src="./src/images/image-gaming-growth.jpg" alt="#">
+        </div>
+        <div>
+          <h2>03/h2>
+            <h5>The Growth of Gaming</h5>
+            <p>How the pandemic has sparked fresh opportunities</p>
+            <div>
+            </div>
+        </div>
+      </div>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
+  </section>
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
 
   02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
+
+
 
   03
-  The Growth of Gaming
-  How
+
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
