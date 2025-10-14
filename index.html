@@ -17,218 +17,135 @@
 <body>
   <section class="container py-20 mx-auto">
 
-    <header id="navbar" class="text-black lg:text-white">
-      <nav class="max-w-[1260px] mx-auto">
+    <header id="navbar" class="text-black">
+      <nav>
         <!-- Mobile/Sticky Menu -->
-        <div id="sticky_menu" class="w-full top-0 left-4">
-          <div class="flex items-center justify-between h-24 px-5 md:px-10 lg:max-w-4xl lg:mx-auto">
-            <div class="flex-1 grid">
-              <img src="./src/images/logo.svg" alt="logo" class="w-20 place-items-start">
+        <div id="sticky_menu" class="w-full top-0 left-0 z-50 bg-white mb-10">
+          <div class="flex items-center justify-between h-24">
+
+            <!-- Logo -->
+            <div class="flex-1">
+              <img src="./src/images/logo.svg" alt="logo" class="w-20">
             </div>
+
+            <!-- Navigation Menu -->
             <div id="nav_menu"
-              class="absolute top-0 right-[-100%] min-h-[70vh] w-[70%] px-5 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden md:px-10 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
-              <div class="flex items-center justify-between h-24 lg:hidden">
+              class="absolute top-0 right-0 hidden min-h-[70vh] w-[70%] bg-white lg:flex flex-col gap-5 duration-500 ease-out overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto lg:flex-row lg:items-center">
+
+              <!-- Close Icon (only mobile) -->
+              <div class="flex items-center justify-between h-24 mt-19 mr-13">
                 <div></div>
-                <div id="closeicon" class="text-3xl cursor-pointer">
-                  <img src="./src/images/icon-menu-close.svg" alt="#">
+                <div id="closeicon" class="text-3xl cursor-pointer lg:hidden">
+                  <img src="./src/images/icon-menu-close.svg" alt="close menu">
                 </div>
               </div>
-              <ul class="flex flex-col items-start gap-5 lg:flex-row">
-                <li><a href="#" class=" hover:text-[#f35c51] ease-in duration-300"></a>Home</li>
-                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>New</li>
-                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Popular</li>
-                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Trending</li>
-                <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Categories</li>
+
+              <!-- Menu Links -->
+              <ul class="flex flex-col items-start gap-5 lg:flex-row lg:items-center backdrop-blur-2xl ml-10">
+                <li><a href="#" class="text-2xl font-bold hover:text-[#f35c] duration-300">Home</a></li>
+                <li><a href="#" class="text-2xl font-bold hover:text-[#f35c] duration-300">New</a></li>
+                <li><a href="#" class="text-2xl font-bold hover:text-[#f35c] duration-300">Popular</a></li>
+                <li><a href="#" class="text-2xl font-bold hover:text-[#f35c] duration-300">Trending</a></li>
+                <li><a href="#" class="text-2xl font-bold hover:text-[#f35c] duration-300">Categories</a></li>
               </ul>
             </div>
 
-            <div class="flex-1 text-white text-3xl cursor-pointer text-right md:hidden lg:hidden">
-              <img src="./src/images/icon-menu.svg" alt="" id="hamburger"">
+            <!-- Hamburger Icon (only mobile) -->
+            <div class="flex-1 text-right lg:hidden">
+              <img src="./src/images/icon-menu.svg" alt="menu" id="hamburger" class="inline-block cursor-pointer">
             </div>
+
           </div>
         </div>
-        <!-- Desktop Menu -->
-        <div class=" hidden lg:block py-4">
-              <div class="container flex items-center justify-center">
-                <!-- social icons -->
-                <div class="flex-1 flex items-center">
-                  <p class="font-bold lobster">Follow us <span class="ml-3 mr-5">-</span></p>
-
-                  <ul class="nav_icons flex space-x-4">
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="text-green-700"><i class="ri-twitter-x-line"></i></a>
-                    </li>
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="text-green-700"><i class="ri-facebook-fill"></i></a>
-                    </li>
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="text-green-700"><i class="ri-instagram-line"></i></a>
-                    </li>
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="text-green-700"><i class="ri-youtube-fill"></i></a></a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="flex-1 lg:hidden">
-                  <img src="/src/images/logo.png" alt="logo" class="w-20 mx-auto">
-                </div>
-
-                <div class="flex-1 flex items-center justify-end">
-                  <ul class="nav_icons flex space-x-8">
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="text-green-700"><i class="ri-user-fill"></i></a>
-                    </li>
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="relative text-green-700"><i class="ri-shopping-bag-fill"></i><span
-                          class="font-bold absolute -top-2 -right-6 bg-white text-black text-sm w-6 h-6 rounded-full grid place-items-center">0</span></a>
-                    </li>
-                    <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
-                      <a href="#" class="text-green-700"><i class="ri-search-line"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="flex items-center justify-center mt-10 lg:hidden">
-                <div class="flex justify-center gap-6">
-                  <a href="#home" class="nav-link active">Home</a>
-                  <a href="#about" class="nav-link">About</a>
-                  <a href="#fragrance" class=" nav-link">Fragrance</a>
-                  <a href="#ptoducts" class="nav-link">Products</a>
-                </div>
-              </div>
-            </div>
 
       </nav>
 
     </header>
-
-    <!-- <header>
-      <nav class="flex items-center justify-between h-16 sm:h-20">
-        <div class="container mx-auto flex items-center justify-between">
-          <img src="./src/images/logo.svg" alt="Home Smart Logo">
-          <div id="menu" class="absolute top-40 right-5 flex flex-col">
-            <ul class="flex flex-col bg-white p-20 lg:items-center lg:gap-5 text-gray-600 cursor-pointer">
-              <li><a href="#" class=" hover:text-[#f35c51] ease-in duration-300"></a>Home</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>New</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Popular</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Trending</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Categories</li>
-            </ul>
-          </div>
-          <div role=" menubar"
-            class="hidden flex-col gap-4 absolute shadow-xl text-center text-lg p-6 items-center lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full">
-            <ul class="flex items-center gap-5 text-gray-600 cursor-pointer">
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Home</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>New</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Popular</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Trending</li>
-              <li><a href="#" class="hover:text-[#f35c51] ease-in duration-300"></a>Categories</li>
-            </ul>
-          </div>
+    <div class="md:flex md:flex-row gap-4 mb-5">
+      <div class="md:w-2/3 w-full">
+        <div class="mb-[35px]">
+          <img src="./src/images/image-web-3-desktop.jpg" alt="Web 3 Image For Desktop" class="md:block hidden w-full">
+          <img src="./src/images/image-web-3-mobile.jpg" alt="Web 3 Image For Mobile" class="md:hidden block">
         </div>
-      </nav>
-    </header> -->
-
-
-    <!-- <div class="flex items-center justify-between py-10">
-      <img src="./src/images/logo.svg" alt="">
-      <ul class="flex items-center gap-5 text-gray-600 cursor-pointer">
-        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Home</li>
-        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>New</li>
-        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Popular</li>
-        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Trending</li>
-        <li class="hover:text-[#f35c51] ease-in duration-300"><a href="#"></a>Categories</li>
-      </ul>
-    </div> -->
-
-    <div class="flex">
-      <div class="flex">
-        <div>
-          <img src="./src/images/image-web-3-mobile.jpg" alt="">
-          <div>
-            <div>
-              <h2 class="">The Bright Future of Web 3.0?</h2>
-            </div>
-            <div>
-              <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the
-                hands of the
-                people.
-                But is it really fulfilling its promise?</p>
-              <button>Read more</button>
-            </div>
+        <div class="flex lg:flex-row flex-col">
+          <h1 class="lg:w-1/2 w-full lg:text-6xl md:text-4xl text-4xl font-extrabold text-black lg:mb-[0px] mb-[30px]">
+            The Bright Future of Web 3.0?</h1>
+          <div class="lg:w-1/2 w-full">
+            <p class="text-black">
+              We dive into the next evolution of the web that claims to put the power of the platforms back into the
+              hands of the
+              people.
+              But is it really fulfilling its promise?
+            </p>
+            <button
+              class="flex h-14 w-48 bg-[#f35c] items-center justify-center font-bold text-black tracking-widest uppercase mt-5 overflow-hidden transition-all before:absolute before:h-0 before:w-0 before:bg-black before:duration-500 before:ease-out hover:text-white hover:before:h-15 hover:before:w-50">
+              <span class="z-10">Read more</span>
+            </button>
           </div>
         </div>
       </div>
-      <div class="bg-black text-white/90">
-        <h3>New</h3>
-        <h5>Hydrogen VS Electric Cars</h5>
-        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+      <div class="bg-black text-white/80 md:w-1/3 py-[35px] px-[30px] flex flex-col xl:justify-between justify-start">
+        <h2 class="text-[#e5a54d] lg:text-4xl text-3xl font-bold mb-6">New</h2>
+        <h3
+          class="text-[#fdfcfe] hover:text-[#e5a54d] cursor-pointer text-xl font-bold transition-all duration-300 ease-in-out mb-4">
+          Hydrogen VS Electric Cars</h3>
+        <p class="text-[#cacacf] mb-7">Will hydrogen-fueled cars ever catch up to EVs?</p>
         <div class="border-1 text-[#30304a]"></div>
 
-        <h5>The Downsides of AI Artistry</h5>
-        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <h3
+          class="text-[#fdfcfe] hover:text-[#e5a54d] cursor-pointer text-xl font-bold transition-all duration-300 ease-in-out mt-4 mb-4">
+          The Downsides of AI Artistry</h3>
+        <p class="text-[#cacacf] mb-7">What are the possible adverse effects of on-demand AI image generation?</p>
         <div class="border-1 text-[#30304a]"></div>
 
-        <h5>Is VC Funding Drying Up?</h5>
-        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        <h3
+          class="text-[#fdfcfe] hover:text-[#e5a54d] cursor-pointer text-xl font-bold transition-all duration-300 ease-in-out mt-4 mb-4">
+          Is VC Funding Drying Up?</h3>
+        <p class="text-[#cacacf]">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
       </div>
     </div>
-
-    <div>
-      <div class="flex">
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:my-5">
+      <div class="flex gap-5 max-w-[350px] w-full mb-5">
+        <img src="./src/images/image-retro-pcs.jpg" alt="#" class="w-[120px] h-auto object-cover">
         <div>
-          <img src="./src/images/image-retro-pcs.jpg" alt="#">
-        </div>
-        <div>
-          <h2>01</h2>
-          <h5>Reviving Retro PCs</h5>
-          <p>What happens when old PCs are given modern upgrades?</p>
-          <div>
-          </div>
-        </div>
-      </div>
-      <div class="flex">
-        <div>
-          <img src="./src/images/image-top-laptops.jpg" alt="#">
-        </div>
-        <div>
-          <h2>02</h2>
-          <h5>Top 10 Laptops of 2022</h5>
-          <p>Our best picks for various needs and budgets.</p>
-          <div>
-          </div>
-        </div>
-      </div>
-      <div class="flex">
-        <div>
-          <img src="./src/images/image-gaming-growth.jpg" alt="#">
-        </div>
-        <div>
-          <h2>03/h2>
-            <h5>The Growth of Gaming</h5>
-            <p>How the pandemic has sparked fresh opportunities</p>
-            <div>
-            </div>
+          <span class="text-[#f35c] text-3xl font-bold">01</span>
+          <h4
+            class="text-lg font-bold my-3 hover:text-[#ec971f] cursor-pointer transition-all duration-300 ease-in-out">
+            Reviving Retro PCs</h4>
+          <p class="text-sm text-gray-700">What happens when old PCs are given modern upgrades?</p>
         </div>
       </div>
 
+      <div class=" flex gap-5 mb-5">
+        <img src="./src/images/image-top-laptops.jpg" alt="#" class="w-[120px] h-auto object-cover">
+        <div>
+          <span class="text-[#f35c] text-3xl font-bold">02</span>
+          <h4
+            class="text-lg font-bold my-3 hover:text-[#ec971f] cursor-pointer transition-all duration-300 ease-in-out">
+            Top 10 Laptops of 2025</h4>
+          <p class="text-sm text-gray-700">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <img src="./src/images/image-gaming-growth.jpg" alt="#" class="w-[120px] h-auto object-cover">
+        <div>
+          <span class="text-[#f35c] text-3xl font-bold">03</span>
+          <h4
+            class="text-lg font-bold my-3 hover:text-[#ec971f] cursor-pointer transition-all duration-300 ease-in-out">
+            The Growth of Gaming</h4>
+          <p class="text-sm text-gray-700">How the pandemic has sparked fresh opportunities</p>
+        </div>
+      </div>
+    </div>
+    <div class="my-5">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#"
+        class="text-2xl font-bold text-[#2807e4] hover:text-[#f10] hover:underline transition-all duration-300 ease-in-out">Nazmul
+        Islam.</a>
+    </div>
   </section>
 
 
-
-  02
-
-
-
-  03
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Nazmul Islam</a>.
-  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 

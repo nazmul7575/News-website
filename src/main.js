@@ -1,20 +1,14 @@
 import "./style.css";
+document.addEventListener("DOMContentLoaded", () => {
+	const hamburger = document.getElementById("hamburger");
+	const navMenu = document.getElementById("nav_menu");
+	const closeIcon = document.getElementById("closeicon");
 
-const navMenu = document.getElementById("nav_menu");
-const navLink = document.querySelectorAll(".nav-link");
-const hamburger = document.getElementById("hamburger");
-const closeicon = document.getElementById("closeicon");
+	hamburger.addEventListener("click", () => {
+		navMenu.classList.remove("hidden");
+	});
 
-hamburger.addEventListener("click", () => {
-	navMenu.classList.toggle("right-[0]");
-});
-
-closeicon.addEventListener("click", () => {
-	navMenu.classList.toggle("right-[0]");
-});
-
-navLink.forEach((link) => {
-	link.addEventListener("click", () => {
-		navMenu.classList.toggle("right-[100px]");
+	closeIcon.addEventListener("click", () => {
+		navMenu.classList.add("hidden");
 	});
 });
